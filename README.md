@@ -26,3 +26,34 @@ function getFood(food) {
 }
 
 console.log(getFood(false));
+
+
+function Person(name) {
+    this.firstName = name;
+}
+
+Person.prototype.prefixName = function(arry){
+    return arry.map((charactor,index) => {
+        return index + charactor +''+ this.firstName
+    })
+}
+
+const person = new Person('SEAN')
+console.log(person)
+console.log(person.prefixName(['kim','lee']))
+
+
+const object = {
+    name : 'this object',
+    func : function(){
+        console.log(this)
+    }
+}
+
+object.func()
+
+
+function SomeObject(name) {
+    this.name = name;
+    console.log(this)
+}

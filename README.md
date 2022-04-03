@@ -57,3 +57,13 @@ function SomeObject(name) {
     this.name = name;
     console.log(this)
 }
+
+
+const object = {
+    name : 'object nameddd',
+    func : () => {
+    console.log(this)
+    }
+}
+
+object.func()
